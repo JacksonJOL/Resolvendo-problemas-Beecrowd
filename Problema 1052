@@ -1,0 +1,28 @@
+
+Problema 1052 ENTRAR COM UM NUMERO E RETORNAR O MES REFERENTE A ELE, EM INGLES
+
+
+Dictionary<int, string> mesAno = new Dictionary<int, string>()
+{
+    {1, "January" },
+    {2, "February" },
+    {3, "March" },
+    {4, "April" },
+    {5, "May" },
+    {6, "June" },
+    {7, "July" },
+    {8, "August" },
+    {9, "September" },
+    {10, "October" },
+    {11, "November" },
+    {12, "December" }
+};
+
+int mes = int.Parse(Console.ReadLine());
+
+
+
+    if (mesAno.TryGetValue(mes, out string mesTexto))
+    {
+        Console.WriteLine(mesTexto);
+    }
