@@ -1,0 +1,25 @@
+problema 1050 URI -- VERIFICAR DE QUAL CIDADE E O DDD
+
+Dictionary<int, string> dddCidades = new Dictionary<int, string>()
+{
+
+    { 61, "Brasilia" },
+    { 71, "Salvador" },
+    { 11, "Sao Paulo" },
+    { 21, "Rio de Janeiro" },
+    { 32, "Juiz de Fora" },
+    { 19, "Campinas" },
+    { 27, "Vitoria" },
+    { 31, "Belo Horizonte"}
+
+};
+int ddd =  int.Parse(Console.ReadLine());
+
+if(dddCidades.TryGetValue(ddd, out string cidade))
+{
+    Console.WriteLine(cidade);
+}
+else
+{
+    Console.WriteLine("DDD não cadastrado");
+}
