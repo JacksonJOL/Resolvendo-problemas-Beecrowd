@@ -1,4 +1,4 @@
-//EXERCICIO 1042 URI -- VERIFICAR MENOR E MAIOR ENTRE NUMEROS DIGITADOS
+//Problema 1042 URI -- VERIFICAR MENOR E MAIOR ENTRE NUMEROS DIGITADOS
 
 int x, y, z, maior, menor, meio;
 string[] numeros = Console.ReadLine().Split(' ');
