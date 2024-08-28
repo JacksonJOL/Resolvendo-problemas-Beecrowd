@@ -1,0 +1,42 @@
+PROBLEMA 1061 URI --  CALCULAR TEMPO DE EVENTO
+
+int d, h, m, s, d1, h1, m1, s1, d2, h2, m2, s2, inicio, fim, duracao, resto;
+
+//ler o dia
+string[] valores = Console.ReadLine().Split(' ');
+d1 = int.Parse(valores[0]);
+
+// ler a linha das horas min seg
+valores = Console.ReadLine().Split(' ');
+h1 = int.Parse(valores[0]);
+m1 = int.Parse(valores[2]);
+s1 = int.Parse(valores[4]);
+
+
+//ler o dia 2
+valores = Console.ReadLine().Split(' ');
+d2 = int.Parse(valores[0]);
+
+// ler a linha das horas min seg do dia final
+valores = Console.ReadLine().Split(' ');
+
+h2 = int.Parse(valores[0]);
+m2 = int.Parse(valores[2]);
+s2 = int.Parse(valores[4]);
+
+inicio = (d1 - 1) * 24 * 60 * 60 + h1 * 60 * 60 + m1 * 60 + s1; // calculando o total em segundos do dia inicial
+fim = (d2 - 1) * 24 * 60 * 60 + h2 * 60 * 60 + m2 * 60 + s2;  // calculando o total em segundos do dia final
+
+duracao = fim - inicio; // achando a duração que teve o evento
+
+d = duracao / (24 * 60 * 60); // achando em dia
+resto = duracao % (24 * 60 * 60); // achando o resto para pegar as horas 
+h = resto / (60 * 60); // achando a hora
+resto = resto % (60 * 60); // achando o resto para pegar  min e seg
+m = resto / 60; // min
+s = resto % 60; // seg
+
+Console.WriteLine(d + " dia(s)");
+Console.WriteLine(h + " hora(s)");
+Console.WriteLine(m + " minuto(s)");
+Console.WriteLine(s + " segundo(s)");
